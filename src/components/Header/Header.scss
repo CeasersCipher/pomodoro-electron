@@ -1,0 +1,57 @@
+.AppHeader {
+  @include display(flex, space-between, center);
+
+  width: 100%;
+  height: rem(70);
+
+  margin-bottom: rem(40);
+
+  @include mq('phone-wide') {
+    margin-bottom: rem(30);
+  }
+
+  @include mq('phone') {
+    margin-bottom: rem(0);
+  }
+
+  & h1 {
+    @include font-roboto(rem(24), #bf616a, normal, normal, rem(28));
+
+    @include mq('phone-wide') {
+      font-size: rem(18);
+    }
+  }
+
+  & button {
+    background: none;
+    border: none;
+    padding: 0;
+  }
+
+  & svg {
+    width: rem(36);
+    height: rem(36);
+    color: #e5e9f0;
+
+    @include mq('phone-wide') {
+      width: rem(28);
+      height: rem(28);
+    }
+  }
+}
+
+.SettingsBtn {
+  z-index: z('settings-btn');
+
+  & svg {
+    transition: transform 0.5s linear;
+
+    &:hover {
+      transform: rotate(90deg);
+    }
+  }
+
+  & :hover {
+    cursor: pointer;
+  }
+}

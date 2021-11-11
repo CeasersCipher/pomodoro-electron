@@ -1,0 +1,23 @@
+.Timebar {
+  position: relative;
+
+  width: rem(370);
+  height: rem(370);
+
+  @include mq('phone-wide') {
+    width: rem(291);
+    height: rem(291);
+  }
+
+  & circle:nth-child(1) {
+    stroke-width: rem(10);
+    stroke: rgb(228, 228, 228);
+  }
+
+  & circle:nth-child(2) {
+    stroke-width: rem(11);
+    stroke: #bf616a;
+
+    transition: stroke-dashoffset 1s linear;
+  }
+}

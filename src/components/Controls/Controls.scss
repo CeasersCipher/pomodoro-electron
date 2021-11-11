@@ -1,0 +1,69 @@
+.Controls {
+  @include display(flex, space-between, center);
+
+  width: rem(230);
+
+  @include mq('phone-wide') {
+    width: rem(200);
+  }
+
+  & button {
+    @include display(flex, center, center);
+
+    border: 1px solid rgba(46, 52, 64, 0.6);
+    border-radius: 100%;
+
+    background: #e5e9f0;
+
+    padding: 0;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  & button:nth-child(1),
+  button:nth-child(3) {
+    width: rem(60);
+    height: rem(60);
+
+    @include mq('phone-wide') {
+      width: rem(50);
+      height: rem(50);
+    }
+
+    & svg {
+      width: rem(22);
+      height: rem(22);
+      color: #2e3440;
+
+      @include mq('phone-wide') {
+        width: rem(18);
+        height: rem(18);
+      }
+    }
+  }
+
+  & button:nth-of-type(2) {
+    width: rem(90);
+    height: rem(90);
+
+    background: #bf616a;
+
+    @include mq('phone-wide') {
+      width: rem(80);
+      height: rem(80);
+    }
+
+    & svg {
+      width: rem(45);
+      height: rem(45);
+      color: #e5e9f0;
+
+      @include mq('phone-wide') {
+        width: rem(36);
+        height: rem(36);
+      }
+    }
+  }
+}
